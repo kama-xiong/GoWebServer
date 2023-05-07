@@ -19,6 +19,11 @@ func (s *ProductCategoryService) GetById(Id int) models.Category {
 	datasource.Db.First(&catetory, Id)
 	return catetory
 }
+func (s *ProductCategoryService) GetByName(name string) models.Category {
+	var catetory models.Category
+	datasource.Db.Where("name=?", name).First(&catetory)
+	return catetory
+}
 
 func (s *ProductCategoryService) GetAll() []models.Category {
 	var categories []models.Category
@@ -34,5 +39,12 @@ func (s *ProductCategoryService) GetParent(kind models.Category) models.Category
 func (s *ProductCategoryService) GetChildren(kind models.Category) []models.Category {
 	var categories []models.Category
 	datasource.Db.Where("lft>? and rgt<? and level>?", kind.Lft, kind.Rgt, kind.Level).Find(&categories)
+	return categories
+}
+func (s *ProductCategoryService) GetChildrenByName(name string) []models.Category {
+	var categories []models.Category
+	var parentcategory models.Category
+	parentcategory = s.GetByName(name)
+	categories = s.GetChildren(parentcategory)
 	return categories
 }

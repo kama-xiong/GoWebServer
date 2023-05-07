@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% include "partial/header.html" with title="Gstar Packaging Company Limited - Jewelry packaging professional manufacturer"  %}
 </head>
 <body>
+{% include "partial/topnav.html" if_exists %}
 
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Lft</th>
+        <th>Rgt</th>
+        <th>Level</th>
+        <th>Name</th>
+        <th>Fullname</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in content %}
+    <tr>
+        <td>{{item.ID}}</td>
+        <td>{{item.Lft}}</td>
+        <td>{{item.Rgt}}</td>
+        <td>{{item.Level}}</td>
+        <td>{{item.Name}}</td>
+        <td>{{item.Fullname}}</td>
+
+
+    </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+
+<!-- footer-->
+{% include "partial/footer.html" if_exists %}
+<!-- 初始化 Foundation JS -->
+<script>
+    $(document).ready(function() {
+        $(document).foundation();
+    })
+</script>
 
 </body>
 </html>
+
+

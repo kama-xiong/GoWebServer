@@ -9,11 +9,23 @@ import (
 type ProductController struct {
 }
 
-func (p *ProductController) Get() mvc.Result {
+func (p *ProductController) GetPaperbox() mvc.Result {
 	service := new(services.ProductCategoryService)
 	data := service.GetAll()
 	return mvc.View{
 		Name: "ProductCategory/productCategory.html",
-		Data: iris.Map{"content": data},
+		Data: iris.Map{"content": data,
+			"curnav": "paperbox",
+		},
+	}
+}
+func (p *ProductController) GetCoveredbox() mvc.Result {
+	service := new(services.ProductCategoryService)
+	data := service.GetChildrenByName("PaperBox")
+	return mvc.View{
+		Name: "ProductCategory/productCategory.html",
+		Data: iris.Map{"content": data,
+			"curnav": "coveredbox",
+		},
 	}
 }

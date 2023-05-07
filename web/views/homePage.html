@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% include "partial/header.html" with title="Gstar Packaging Company Limited - Jewelry packaging professional manufacturer"  %}
 </head>
 <body>
-<div>
-    这个是用来测试HomePage的
+{% include "partial/topnav.html" if_exists %}
+<div class="row">
+    <a href="#" class="th">
+        <img src="/static/za.jpg" alt="ZA"/>
+    </a>
 </div>
+<div style="padding:20px;">
+    <h3>基本头部工具条实例</h3>
+    <p>工具条是在页面头部的导航。</p>
+    <p><strong>注意:</strong> 在小屏幕上工具条会被一个按钮取代 (重置窗口，查看效果)。</p>
+    <p>在按钮被点击后导航项将显示。</p>
+</div>
+
+<!-- footer-->
+{% include "partial/footer.html" if_exists %}
+<!-- 初始化 Foundation JS -->
+<script>
+    $(document).ready(function() {
+        $(document).foundation();
+    })
+</script>
+
 </body>
 </html>
+
