@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab1d83d3-4787-4a70-a1d8-ca6e9385a3da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/categoryservice.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/categoryservice.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/controllers/ProductController.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/controllers/ProductController.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/partial/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/partial/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/partial/topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/partial/topnav.html" afterDir="false" />
-    </list>
+    <list default="true" id="ab1d83d3-4787-4a70-a1d8-ca6e9385a3da" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
