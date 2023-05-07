@@ -5,3 +5,10 @@
     <span class="label round">Round Label</span>
     <span class="label success round">5</span>
 </div>
+<script>
+// li标签点击添加active效果
+$("ul li").click(function() {
+$(this).siblings('li').removeClass('active');  // 删除其兄弟元素的样式
+$(this).addClass('active');                    // 为点击元素添加样式
+});
+</script>

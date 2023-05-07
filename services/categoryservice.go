@@ -21,7 +21,10 @@ func (s *ProductCategoryService) GetById(Id int) models.Category {
 }
 func (s *ProductCategoryService) GetByName(name string) models.Category {
 	var catetory models.Category
-	datasource.Db.Where("name=?", name).First(&catetory)
+	datasource.Db.Where("name=?", name).Limit(1).Find(&catetory)
+	if datasource.Db.Error != nil {
+
+	}
 	return catetory
 }
 

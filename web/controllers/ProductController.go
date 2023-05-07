@@ -4,28 +4,20 @@ import (
 	"GoWebServer/services"
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/mvc"
+	"strings"
 )
 
 type ProductController struct {
 }
 
-func (p *ProductController) GetPaperbox() mvc.Result {
+func (p *ProductController) GetBy(kind string) mvc.Result {
 	service := new(services.ProductCategoryService)
-	data := service.GetAll()
+	data := service.GetChildrenByName(kind)
 	return mvc.View{
 		Name: "ProductCategory/productCategory.html",
 		Data: iris.Map{"content": data,
-			"curnav": "paperbox",
+			"curnav": strings.ToLower(kind),
 		},
 	}
-}
-func (p *ProductController) GetCoveredbox() mvc.Result {
-	service := new(services.ProductCategoryService)
-	data := service.GetChildrenByName("PaperBox")
-	return mvc.View{
-		Name: "ProductCategory/productCategory.html",
-		Data: iris.Map{"content": data,
-			"curnav": "coveredbox",
-		},
-	}
+
 }

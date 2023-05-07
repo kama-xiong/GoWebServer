@@ -23,6 +23,7 @@ func main() {
 	//app.OnErrorCode(iris.StatusInternalServerError, routeFunc.InternalServerError)
 
 	app.Get("/", func(ctx iris.Context) {
+		ctx.ViewData("curnav", "home")
 		ctx.View("homePage.html")
 
 	})
