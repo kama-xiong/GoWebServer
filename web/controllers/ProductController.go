@@ -11,7 +11,9 @@ type ProductController struct {
 }
 
 func (p *ProductController) GetBy(kind string) mvc.Result {
+	//menuservice := new(services.MenuService)
 	service := new(services.ProductCategoryService)
+	//menus := menuservice.GetAll()
 	data := service.GetChildrenByName(kind)
 	return mvc.View{
 		Name: "ProductCategory/productCategory.html",

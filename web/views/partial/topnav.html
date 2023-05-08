@@ -8,18 +8,31 @@
         如果需要只显示图片，可以删除 "Menu" 文本 -->
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
+
     <section class="top-bar-section">
         <ul class="left">
-            <li class="active"><a href="/">Home</a></li>
-            <li ><a href="/product/paperbox">Paper Box</a></li>
-            <li><a href="/product/coveredbox">Covered Box</a></li>
-            <li><a href="/product/paperbag">Paper Bag</a></li>
-            <li><a href="/product/pouch">Pouch</a></li>
-            <li><a href="/product/display">Display</a></li>
-            <li><a href="/boxguide">Box Guide</a></li>
-            <li><a href="/newproduct">New Product</a></li>
-            <li><a href="/news">News</a></li>
-            <li><a href="/contactus">Contact Us</a></li>
+
+            {% for item in menus %}
+            {% if item.Action==curnav %}
+            <li class="active"><a href="{{item.Router}}">{{item.Name_en}}</a></li>
+            {% else %}
+            <li ><a href="{{item.Router}}">{{item.Name_en}}</a></li>
+            {% endif %}
+            {% empty %}
+            <li><a href="/initialdata">InitialData</a></li>
+            {% endfor %}
         </ul>
     </section>
 </nav>
+
+<!--<li class="active"><a href="/">Home</a></li>-->
+<!--<li ><a href="/product/paperbox">Paper Box</a></li>-->
+<!--<li><a href="/product/coveredbox">Covered Box</a></li>-->
+<!--<li><a href="/product/paperbag">Paper Bag</a></li>-->
+<!--<li><a href="/product/pouch">Pouch</a></li>-->
+<!--<li><a href="/product/display">Display</a></li>-->
+<!--<li><a href="/boxguide">Box Guide</a></li>-->
+<!--<li><a href="/newproduct">New Product</a></li>-->
+<!--<li><a href="/news">News</a></li>-->
+<!--<li><a href="/contactus">Contact Us</a></li>-->
+<!--<li><a href="/initialdata">InitialData</a></li>-->

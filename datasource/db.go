@@ -26,7 +26,7 @@ func init() {
 	}
 	fmt.Println("初始化数据库成功......")
 
-	Db.AutoMigrate(&models.Category{}, &models.Product{}) //自动迁移 跟py一样
+	Db.AutoMigrate(&models.Category{}, &models.Product{}, &models.Menu{}) //自动迁移 跟py一样
 }
 
 func getDsn(filename string) (string, error) {

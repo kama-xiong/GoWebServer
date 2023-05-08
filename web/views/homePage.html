@@ -16,7 +16,33 @@
     <p><strong>注意:</strong> 在小屏幕上工具条会被一个按钮取代 (重置窗口，查看效果)。</p>
     <p>在按钮被点击后导航项将显示。</p>
 </div>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name_en</th>
+        <th>Name_ch</th>
+        <th>Router</th>
+        <th>Action</th>
+        <th>Order</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in menus %}
+    <tr>
+        <td>{{item.ID}}</td>
+        <td>{{item.Name_en}}</td>
+        <td>{{item.Name_ch}}</td>
+        <td>{{item.Router}}</td>
+        <td>{{item.Action}}</td>
+        <td>{{item.Order}}</td>
 
+
+    </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
 <!-- footer-->
 {% include "partial/footer.html" if_exists %}
 <!-- 初始化 Foundation JS -->

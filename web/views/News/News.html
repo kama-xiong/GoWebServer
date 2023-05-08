@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include "partial/header.html" with title="Gstar Packaging Company Limited - Jewelry packaging professional manufacturer"  %}
+</head>
+<body>
+{% include "partial/topnav.html" if_exists %}
+
+<div><h1>News Page</h1></div>
+
+<!-- footer-->
+{% include "partial/footer.html" if_exists %}
+<!-- 初始化 Foundation JS -->
+<script>
+  $(document).ready(function() {
+    $(document).foundation();
+  })
+</script>
+
+</body>
+</html>
+
+
