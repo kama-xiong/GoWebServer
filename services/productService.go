@@ -22,7 +22,7 @@ func (p *ProductService) GetPageProducts(page models.Page) []models.Product {
 	if err := datasource.Db.Where("name=?", page.Keyword).Find(&category).Error; err != nil {
 		p.ctx.View("err_msg", err.Error())
 	} else {
-		if err := datasource.Db.Preload("Category", "name=?", page.Keyword).Limit(page.PageSize).Offset((page.PageNum - 1) * page.PageSize).Find(&products).Error; err != nil {
+		if err := datasource.Db.Preload("Category").Where("category_id=?", category.ID).Limit(page.PageSize).Offset((page.PageNum - 1) * page.PageSize).Find(&products).Error; err != nil {
 			p.ctx.ViewData("err_msg", err.Error())
 		}
 	}

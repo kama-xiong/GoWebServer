@@ -3,7 +3,6 @@ package main
 import (
 	"GoWebServer/services"
 	"GoWebServer/web/controllers"
-	"fmt"
 	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/mvc"
 )
@@ -55,12 +54,7 @@ func webMvc(app *mvc.Application) {
 
 }
 func before(ctx iris.Context) {
-	fmt.Println("before")
 	menus := new(services.MenuService).GetAll()
 	ctx.ViewData("menus", menus)
-	ctx.Next()
-}
-func after(ctx iris.Context) {
-	fmt.Println("after")
 	ctx.Next()
 }

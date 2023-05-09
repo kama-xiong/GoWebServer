@@ -36,6 +36,7 @@ func (p *ProductController) BeforeActivation(b mvc.BeforeActivation) {
 func (p *ProductController) BigCategoryHandler(kind string) mvc.Result {
 	service := new(services.ProductCategoryService)
 	data := service.GetChildrenByName(kind)
+
 	fmt.Println("big Category handler")
 	return mvc.View{
 		Name: "ProductCategory/productCategory.html",
@@ -46,8 +47,10 @@ func (p *ProductController) BigCategoryHandler(kind string) mvc.Result {
 }
 
 func (p *ProductController) SmallCategoryHandler(kind string, smallkind string) mvc.Result {
-	service := new(services.ProductCategoryService)
-	data := service.GetChildrenByName(smallkind)
+
+	s := new(services.ProductService)
+	page := models.Page{PageNum: 1, PageSize: 12, Keyword: smallkind}
+	data := s.GetPageProducts(page)
 	fmt.Println("small Category handler")
 	return mvc.View{
 		Name: "ProductCategory/productCategory.html",
@@ -58,9 +61,9 @@ func (p *ProductController) SmallCategoryHandler(kind string, smallkind string) 
 }
 
 func (p *ProductController) SmallCategoryPageHandler(kind string, smallkind string, pagenum int) mvc.Result {
-	service := new(services.ProductCategoryService)
+	service := new(services.ProductService)
 	page := models.Page{PageNum: pagenum, PageSize: 12, Keyword: smallkind}
-	data := service.GetPageChildrenByName(page)
+	data := service.GetPageProducts(page)
 	fmt.Println("small Category page handler")
 	return mvc.View{
 		Name: "ProductCategory/productCategory.html",

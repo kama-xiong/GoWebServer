@@ -5,24 +5,28 @@
 </head>
 <body>
 {% include "partial/topnav.html" if_exists %}
+<br>
 <div class="container-inner">
-    <div class="row row-content">
-        <div class="medium-2 columns" style="background-color:#f1f1f1;">
-            <ul class="side-nav">
-                {% for sidebar in content %}
-                <li><a href="{{sidebar.Route}}">{{sidebar.Name}}  Series</a> </li>
-                {% endfor %}
-            </ul>
+<div class="row row-content">
+    <div class="medium-2 columns" style="background-color:#f1f1f1;">
+        <ul class="side-nav">
+            {% for item in content %}
+            <li><a href="{{item.Route}}">{{item.Name}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="medium-10 columns">
+        {% for item in content %}
+        <div class="medium-4 large-4 columns">
+            <a href="{{item.Route}}" class="th">
+                <img src="{{item.ImgUrl}}" alt="Paris">
+            </a>
+            <p class="text-center">{{item.Name}}</p>
         </div>
-        <div class="medium-10 columns">
-            <h1>侧栏导航</h1>
-            <p>该实例将侧栏导航房子网格设计中，背景为灰色。</p>
-            <p><strong>注意：</strong> 在小屏幕尺寸上，侧栏导航是垂直的，且宽度是延展到整个屏幕（100% width）。</p>
-            <p>重置浏览器查看效果。</p>
-            <p>行为动作可以通过 javascript 或媒体查询来修改它。</p>
-        </div>
+        {%endfor%}
     </div>
 </div>
+    </div>
 
 
 

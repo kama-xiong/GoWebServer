@@ -6,14 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ab1d83d3-4787-4a70-a1d8-ca6e9385a3da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/category.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/category.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/categoryservice.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/categoryservice.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/productService.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/productService.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/controllers/ProductController.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/controllers/ProductController.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/ProductCategory/productCategory.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/ProductCategory/productCategory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/homePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/homePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/partial/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/partial/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/partial/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/partial/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/partial/topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/partial/topnav.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,23 +39,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "last_opened_file_path": "E:/dbconfig.json",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/dbconfig.json&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="go build GoWebServer" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="GoWebServer" />
