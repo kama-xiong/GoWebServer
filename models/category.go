@@ -8,4 +8,5 @@ type Category struct {
 	Rgt      int64  `json:"rgt"`
 	Level    int64  `json:"level"`
 	ImgUrl   string `json:"imgUrl" gorm:"size:100"`
+	Route    string `json:"route" gorm:"size:40"`
 }

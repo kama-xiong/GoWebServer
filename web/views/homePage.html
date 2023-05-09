@@ -5,44 +5,44 @@
 </head>
 <body>
 {% include "partial/topnav.html" if_exists %}
-<div class="row">
-    <a href="#" class="th">
-        <img src="/static/za.jpg" alt="ZA"/>
-    </a>
+<hr>
+
+<div class="row row-content" >
+    <div style="padding:20px;">
+        <div class="panel">
+            <h3>Professional Jewelry Manufacturer</h3>
+            <p>Established in 2006, Gstar Packaging Corporation has 16 years’ experience and expertise in the Packaging Industry.</p>
+            <p>The Company has located in Daling Industrial Area,Zhongshan,China. </p>
+            <p>With our professional manufacturing experience , GstarPak has grown to be one of the reliable jewelry packaging suppliers in China.</p>
+
+            <p>Continuous plant and equipment upgrades reflect our desire to be a excellent provider of packaging in the industry but, more important, are the levels to which we are committed in improvement.</p>
+
+            <p>We have often being credited in the design and brave use of materials on our products. This innovative culture is still an integral part of today's GstarPak and we are constantly searching for ways to add value and service to our customers.</p>
+            <p>We aim to promote sustainability in all our business activities, reinforcing our excellent supplier position in .</p>
+        </div>
+    </div>
+        <div class="large-2 columns"></div>
+
 </div>
-<div style="padding:20px;">
-    <h3>基本头部工具条实例</h3>
-    <p>工具条是在页面头部的导航。</p>
-    <p><strong>注意:</strong> 在小屏幕上工具条会被一个按钮取代 (重置窗口，查看效果)。</p>
-    <p>在按钮被点击后导航项将显示。</p>
+<hr>
+<div class="row row-content">
+    <div style="padding:20px">
+        <ul class="clearing-thumbs" data-clearing>
+            <li><a href="/static/za.jpg" class="th"><img data-caption="PaperBox" src="/static/za.jpg" width="200" height="100"></a></li>
+            <li><a href="/static/za.jpg" class="th"><img data-caption="CoveredBox" src="/static/za.jpg" width="200" height="100"></a></li>
+            <li><a href="/static/za.jpg" class="th"><img data-caption="PaperBag" src="/static/za.jpg" width="200" height="100"></a></li>
+        </ul>
+    </div>
 </div>
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Name_en</th>
-        <th>Name_ch</th>
-        <th>Router</th>
-        <th>Action</th>
-        <th>Order</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for item in menus %}
-    <tr>
-        <td>{{item.ID}}</td>
-        <td>{{item.Name_en}}</td>
-        <td>{{item.Name_ch}}</td>
-        <td>{{item.Router}}</td>
-        <td>{{item.Action}}</td>
-        <td>{{item.Order}}</td>
 
 
-    </tr>
-    {% endfor %}
+<hr>
+<!--<div class="row">-->
+<!--    <a href="#" class="th">-->
+<!--        <img src="/static/za.jpg" alt="ZA"/>-->
+<!--    </a>-->
+<!--</div>-->
 
-    </tbody>
-</table>
 <!-- footer-->
 {% include "partial/footer.html" if_exists %}
 <!-- 初始化 Foundation JS -->

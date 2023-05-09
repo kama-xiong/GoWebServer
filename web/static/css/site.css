@@ -1,0 +1,12 @@
+.row-nav,.row-foot{
+    max-width: 1400px;
+}
+.row-content{
+    max-width: 1200px;
+}
+.foot-copy{
+    font-size:10px;
+}
+.container-inner{
+    min-height: 800px;
+}

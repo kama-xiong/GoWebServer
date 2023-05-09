@@ -10,6 +10,7 @@ import (
 )
 
 type ProductController struct {
+	ctx iris.Context
 }
 
 //func (p *ProductController) GetBy(kind string) mvc.Result {
@@ -27,17 +28,15 @@ type ProductController struct {
 
 func (p *ProductController) BeforeActivation(b mvc.BeforeActivation) {
 	println("before activation...")
-	b.Handle("GET", "/{kind:string}/{pageNum:int}", "PageHandler")
-	b.Handle("GET", "/{kind:string}", "CategoryHandler")
-}
-func (p *ProductController) PageHandler(kind string, pageNum int) mvc.Result {
+	b.Handle("GET", "/{kind:string}", "BigCategoryHandler")
+	b.Handle("GET", "/{kind:string}/{smallkind:string}", "SmallCategoryHandler")
+	b.Handle("GET", "/{bigkind:string}/{smallkind:string}/{pageNum:int}", "SmallCategoryPageHandler")
 
-	fmt.Println("The pagenum is" + string(pageNum))
-	fmt.Println(pageNum)
-	service := new(services.ProductService)
-	page := models.Page{PageNum: pageNum, PageSize: 12, Keyword: kind, Desc: false}
-	data := service.GetPageProducts(page)
-	fmt.Println("first page handler")
+}
+func (p *ProductController) BigCategoryHandler(kind string) mvc.Result {
+	service := new(services.ProductCategoryService)
+	data := service.GetChildrenByName(kind)
+	fmt.Println("big Category handler")
 	return mvc.View{
 		Name: "ProductCategory/productCategory.html",
 		Data: iris.Map{"content": data,
@@ -45,10 +44,24 @@ func (p *ProductController) PageHandler(kind string, pageNum int) mvc.Result {
 		},
 	}
 }
-func (p *ProductController) CategoryHandler(kind string) mvc.Result {
+
+func (p *ProductController) SmallCategoryHandler(kind string, smallkind string) mvc.Result {
 	service := new(services.ProductCategoryService)
-	data := service.GetChildrenByName(kind)
-	fmt.Println("first page handler")
+	data := service.GetChildrenByName(smallkind)
+	fmt.Println("small Category handler")
+	return mvc.View{
+		Name: "ProductCategory/productCategory.html",
+		Data: iris.Map{"content": data,
+			"curnav": strings.ToLower(kind),
+		},
+	}
+}
+
+func (p *ProductController) SmallCategoryPageHandler(kind string, smallkind string, pagenum int) mvc.Result {
+	service := new(services.ProductCategoryService)
+	page := models.Page{PageNum: pagenum, PageSize: 12, Keyword: smallkind}
+	data := service.GetPageChildrenByName(page)
+	fmt.Println("small Category page handler")
 	return mvc.View{
 		Name: "ProductCategory/productCategory.html",
 		Data: iris.Map{"content": data,

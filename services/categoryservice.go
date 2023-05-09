@@ -45,9 +45,8 @@ func (s *ProductCategoryService) GetChildren(kind models.Category) []models.Cate
 	return categories
 }
 func (s *ProductCategoryService) GetChildrenByName(name string) []models.Category {
-	var categories []models.Category
-	var parentcategory models.Category
-	parentcategory = s.GetByName(name)
-	categories = s.GetChildren(parentcategory)
-	return categories
+	return s.GetChildren(s.GetByName(name))
+}
+func (s *ProductCategoryService) GetPageChildrenByName(page models.Page) []models.Category {
+	return s.GetChildren(s.GetByName(page.Keyword))
 }
