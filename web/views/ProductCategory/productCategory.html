@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {% include "partial/header.html" with title="Gstar Packaging Company Limited - Jewelry packaging professional manufacturer"  %}
+    {% include "partial/header.html" %}
 </head>
 <body>
 {% include "partial/topnav.html" if_exists %}
 <br>
 <div class="container-inner">
 <div class="row row-content">
-    <div class="medium-2 columns" style="background-color:#f1f1f1;">
-        <ul class="side-nav">
-            {% for item in content %}
+    <div class="medium-1 columns" >
+        <strong>Series</strong>
+        <ul class="side-nav" >
+            {% for item in categoryData %}
             <li><a href="{{item.Route}}">{{item.Name}}</a></li>
             {% endfor %}
         </ul>
     </div>
-    <div class="medium-10 columns">
-        {% for item in content %}
+
+    <div class="medium-7 columns">
+        {% for item in productData %}
         <div class="medium-4 large-4 columns">
-            <a href="{{item.Route}}" class="th">
+            <a href="#" class="th">
                 <img src="{{item.ImgUrl}}" alt="Paris">
             </a>
-            <p class="text-center">{{item.Name}}</p>
+<!--            <p class="text-center">{{item.Name}}</p>-->
+            <div>
+                <ul class="pricing-table">
+                    <li class="title">{{item.Name}}</li>
+                    <li class="bullet-item">Size:{{item.Size}}</li>
+                    <li class="bullet-item">{{item.PackingInfo}}</li>
+                    <li class="bullet-item">CBM: {{item.Cbm}} Kg</li>
+                    <li class="bullet-item">G.W.: {{item.Gw}} Kg</li>
+                    <li class="bullet-item">N.W.: {{item.Nw}} Kg</li>
+
+                </ul>
+            </div>
         </div>
+
         {%endfor%}
     </div>
+    <div class="medium-4 columns">
+        <img src="{{curDategory.ImgUrl}}"/>
+    </div>
+
 </div>
     </div>
 

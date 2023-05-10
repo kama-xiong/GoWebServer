@@ -24,7 +24,6 @@ func init() {
 	if err != nil {
 		panic("failed to connect database")
 	}
-	fmt.Println("初始化数据库成功......")
 
 	Db.AutoMigrate(&models.Category{}, &models.Product{}, &models.Menu{}) //自动迁移 跟py一样
 }
@@ -43,10 +42,10 @@ func getDsn(filename string) (string, error) {
 	}
 	var dsn DSN
 	json.Unmarshal(jsonData, &dsn)
-	fmt.Println(dsn)
+	//fmt.Println(dsn)
 	//"user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local"
 	dsnStr := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8mb4&parseTime=True&loc=Local", dsn.User, dsn.Pass, dsn.Host, dsn.Port, dsn.Dbname)
-	fmt.Printf(dsnStr)
+	//fmt.Printf(dsnStr)
 	return dsnStr, nil
 
 }

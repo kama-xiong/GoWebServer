@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {% include "partial/header.html" with title="Gstar Packaging Company Limited - Jewelry packaging professional manufacturer"  %}
+    {% include "partial/header.html"  %}
 </head>
 <body>
 {% include "partial/topnav.html" if_exists %}
@@ -24,19 +24,30 @@
         <div class="large-2 columns"></div>
 
 </div>
-<hr>
+
 <div class="row row-content">
-    <div style="padding:20px">
-        <ul class="clearing-thumbs" data-clearing>
-            <li><a href="/static/za.jpg" class="th"><img data-caption="PaperBox" src="/static/za.jpg" width="200" height="100"></a></li>
-            <li><a href="/static/za.jpg" class="th"><img data-caption="CoveredBox" src="/static/za.jpg" width="200" height="100"></a></li>
-            <li><a href="/static/za.jpg" class="th"><img data-caption="PaperBag" src="/static/za.jpg" width="200" height="100"></a></li>
-        </ul>
+    <div class="medium-12 columns ">
+        {% for item in category %}
+        <div class="medium-3 large-3 columns">
+            <a href="#" class="th">
+                <img src="{{item.ImgUrl}}" alt="Paris">
+            </a>
+            <!--            <p class="text-center">{{item.Name}}</p>-->
+            <div>
+                <ul class="pricing-table">
+                    <li class="title">{{item.Name}}</li>
+
+                </ul>
+            </div>
+        </div>
+
+        {%endfor%}
     </div>
+
 </div>
 
 
-<hr>
+
 <!--<div class="row">-->
 <!--    <a href="#" class="th">-->
 <!--        <img src="/static/za.jpg" alt="ZA"/>-->

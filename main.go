@@ -10,6 +10,7 @@ import (
 func main() {
 	app := iris.New()
 	app.Logger().SetLevel("info")
+
 	//全局设置
 	app.UseGlobal(before)
 	//app.DoneGlobal(after)
@@ -33,7 +34,7 @@ func main() {
 	})
 	mvc.Configure(app.Party("/"), webMvc)
 	//mvc.Configure(app.Party("/product"), productsMvc)
-	app.Run(iris.Addr(":8080"), iris.WithCharset("UTF-8"))
+	app.Run(iris.Addr(":8090"), iris.WithCharset("UTF-8"))
 
 }
 
@@ -48,8 +49,6 @@ func webMvc(app *mvc.Application) {
 	app.Party("/").Handle(new(controllers.AboutUsController))
 	app.Party("/aboutus").Handle(new(controllers.AboutUsController))
 	app.Party("/contactus").Handle(new(controllers.ContactUsController))
-	app.Party("/news").Handle(new(controllers.NewsController))
-	app.Party("/newproducts").Handle(new(controllers.NewProductsController))
 	app.Party("/product").Handle(new(controllers.ProductController))
 
 }

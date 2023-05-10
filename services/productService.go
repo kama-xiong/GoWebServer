@@ -3,7 +3,6 @@ package services
 import (
 	"GoWebServer/datasource"
 	"GoWebServer/models"
-	"fmt"
 	"github.com/kataras/iris/v12"
 )
 
@@ -26,6 +25,5 @@ func (p *ProductService) GetPageProducts(page models.Page) []models.Product {
 			p.ctx.ViewData("err_msg", err.Error())
 		}
 	}
-	fmt.Printf("products is %s", products)
 	return products
 }
