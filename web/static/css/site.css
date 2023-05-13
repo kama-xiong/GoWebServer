@@ -11,3 +11,6 @@
     min-height: 700px;
     min-width: 1400px;
 }
+.pricing-table .bullet-item {
+    padding: 0.4rem;
+}

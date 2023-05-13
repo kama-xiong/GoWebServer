@@ -53,7 +53,7 @@ func (p *ProductController) BigCategoryHandler(kind string) mvc.Result {
 		Data: iris.Map{
 			"categoryData": cdata,
 			"productData":  pdata,
-			"curDategory":  curCategory,
+			"curCategory":  curCategory,
 			"curnav":       strings.ToLower(kind),
 			"title":        kind,
 		},
@@ -84,7 +84,7 @@ func (p *ProductController) SmallCategoryHandler(kind string, smallkind string) 
 		Data: iris.Map{
 			"categoryData": cdata,
 			"productData":  pdata,
-			"curDategory":  curCategory,
+			"curCategory":  curCategory,
 			"curnav":       strings.ToLower(kind),
 		},
 	}

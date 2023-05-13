@@ -6,19 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ab1d83d3-4787-4a70-a1d8-ca6e9385a3da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasource/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/datasource/db.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/categoryservice.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/categoryservice.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/menuService.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/menuService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/productService.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/productService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/controllers/AboutusController.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/controllers/AboutusController.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/controllers/ProductController.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/controllers/ProductController.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/static/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/ContactUs/ContactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/ContactUs/ContactUs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/ProductCategory/productCategory.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/ProductCategory/productCategory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/homePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/homePage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/partial/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/partial/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/partial/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/partial/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/partial/topnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/partial/topnav.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +49,7 @@
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "E:/bin",
+    "last_opened_file_path": "C:/Users/Administrator",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

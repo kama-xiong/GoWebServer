@@ -13,16 +13,22 @@
 
     <section class="top-bar-section">
         <ul class="left">
-
-            {% for item in menus %}
-            {% if item.Action==curnav %}
-            <li class="active"><a href="{{item.Router}}">{{item.Name_en}}</a></li>
-            {% else %}
-            <li ><a href="{{item.Router}}">{{item.Name_en}}</a></li>
-            {% endif %}
-            {% empty %}
-            <li><a href="/initialdata">InitialData</a></li>
-            {% endfor %}
+            <li ><a href="/about">About Us</a></li>
+            <li ><a href="/product/paperbox">Paper Box</a></li>
+            <li ><a href="/product/coveredbox">Covered Box</a></li>
+            <li ><a href="/product/paperbag">Paper Bag</a></li>
+            <li ><a href="/product/pouch">Pouch</a></li>
+            <li ><a href="/product/display">Display</a></li>
+            <li ><a href="/contact">Contact Us</a></li>
+<!--            {% for item in menus %}-->
+<!--            {% if item.Action==curnav %}-->
+<!--            <li class="active"><a href="{{item.Router}}">{{item.Name_en}}</a></li>-->
+<!--            {% else %}-->
+<!--            <li ><a href="{{item.Router}}">{{item.Name_en}}</a></li>-->
+<!--            {% endif %}-->
+<!--            {% empty %}-->
+<!--            <li><a href="/initialdata">InitialData</a></li>-->
+<!--            {% endfor %}-->
         </ul>
     </section>
 </nav>

@@ -3,8 +3,11 @@ package main
 import (
 	"GoWebServer/services"
 	"GoWebServer/web/controllers"
+	"fmt"
 	"github.com/kataras/iris/v12"
+	"github.com/kataras/iris/v12/cache"
 	"github.com/kataras/iris/v12/mvc"
+	"time"
 )
 
 func main() {
@@ -12,7 +15,8 @@ func main() {
 	app.Logger().SetLevel("info")
 
 	//全局设置
-	app.UseGlobal(before)
+
+	//app.UseGlobal(before)
 	//app.DoneGlobal(after)
 	//app.Done(after)
 	//设置模板
@@ -46,13 +50,16 @@ func productsMvc(app *mvc.Application) {
 }
 func webMvc(app *mvc.Application) {
 
+	app.Router.Use(cache.Handler(20 * time.Second))
 	app.Party("/").Handle(new(controllers.AboutUsController))
-	app.Party("/aboutus").Handle(new(controllers.AboutUsController))
-	app.Party("/contactus").Handle(new(controllers.ContactUsController))
+	app.Party("/about").Handle(new(controllers.AboutUsController))
+	app.Party("/contact").Handle(new(controllers.ContactUsController))
 	app.Party("/product").Handle(new(controllers.ProductController))
 
 }
 func before(ctx iris.Context) {
+
+	fmt.Print("menu select")
 	menus := new(services.MenuService).GetAll()
 	ctx.ViewData("menus", menus)
 	ctx.Next()
